@@ -18,9 +18,6 @@ async function main() {
 }
 
 async function seed() {
-  const { PrismaClient } = require('@prisma/client');
-  const prisma = new PrismaClient();
-
   for (let i = 1; i <= 3; i++) {
 	const user = await prisma.user.create({
 	  data: {
@@ -37,9 +34,6 @@ async function seed() {
 
   await prisma.$disconnect();
 }
-
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
 
 async function main() {
   for (let i = 1; i <= 3; i++) {

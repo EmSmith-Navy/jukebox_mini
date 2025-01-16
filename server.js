@@ -1,7 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
-const app = express();
+// Remove the duplicate declaration of 'prisma'
+// Remove the duplicate declaration of 'app'
 app.use(express.json());
 
 app.get('/users', async (req, res) => {
